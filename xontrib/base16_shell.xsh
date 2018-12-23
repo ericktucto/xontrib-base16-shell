@@ -1,4 +1,5 @@
 from os.path import isfile, basename, realpath
+from os import path.join
 
 vim_template = """if !exists('g:colors_name') || g:colors_name != 'base16-{theme}'
   colorscheme base16-{theme}
@@ -27,7 +28,7 @@ def base16(args):
     if (theme == 'list'):
         themes = [theme for theme in all_themes()]
         return '\n'.join(themes)
-    script = $BASE16_SHELL + "scripts/base16-" + theme + ".sh"
+    script = path.join($BASE16_SHELL, "scripts", "base16-" + theme + ".sh" )
 
     # Checking if exist theme
     if (isfile(script)):
