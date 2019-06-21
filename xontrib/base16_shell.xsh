@@ -23,7 +23,7 @@ def base16(args):
 
     # Declaration of variables
     if not args:
-        return 'Dont select theme. Write \033[0;32mlist\033[0;0m to list the themes.'
+        return "Don't select theme. Write \033[0;32mlist\033[0;0m to list the themes."
     theme = args[0]
     if (theme == 'list'):
         themes = [theme for theme in all_themes()]
@@ -39,7 +39,7 @@ def base16(args):
         echo -e @(template) > ~/.vimrc_background
         return True
     else:
-        print("Not exists theme.")
+        print("Theme does not exist.")
         return False
     # TODO: Terminate Hooks
     # code ...
